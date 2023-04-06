@@ -33,5 +33,22 @@ abstract class ModelwPDO{
         }
     }
 
+    //Método que permite ejecutar consultas de escritura
+    protected function setQuery($query,$params=array()){
+        try{
+            $this->openConnection();
+            $st=$this->conn->prepare($query);
+            $st->execute($params);
+            $affectedRows=$st->rowCount();
+            $this->closeConnection();
+            return $affectedRows;
+        }
+        catch(Exception $e){
+            echo $e->getMessage();
+            $this->closeConnection();
+            return -1;
+        }
+    }
+
 }
 ?>
