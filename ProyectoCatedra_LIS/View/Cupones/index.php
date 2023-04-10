@@ -1,6 +1,4 @@
-<?php
-require_once '../../Model/CuponesModel.php';
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

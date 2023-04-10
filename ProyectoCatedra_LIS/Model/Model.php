@@ -4,31 +4,35 @@ abstract class ModelwPDO{
     private $usuario="root";
     private $contraseña="";
     private $bd="dbcupones";
-    protected $dbh; //Database Handler
+    private $conn;
 
     //Método para abrir la conexion con la base de datos
-    private function openConnection(){
-        $dsn="mysql:host=$this->servidor;dbname=$this->bd";
-        $this->dbh=new PDO($dsn, $this->usuario,$this->contraseña);
+    protected function openConnection(){
+        try{
+           $this->conn=new PDO("mysql:host=$this->servidor;dbname=$this->bd;charset=utf8",$this->usuario,$this->contraseña);
+        }
+        catch(PDOException $e){
+            echo $e->getMessage();
+        }
     }
     
     //Método para cerrar la conexion con la base de datos
-    private function closeConnection(){
-        $this->dbh=null;
+    protected function closeConnection(){
+        $this->conn=null;
     }
 
     //Método que permite ejecutar consultas de selección
     protected function getQuery($query,$params=array()){
         try{
-            $rows=[];
             $this->openConnection();
-            $st=$this->dbh->prepare($query);
+            $st=$this->conn->prepare($query);
             $st->execute($params);
             $rows=$st->fetchAll();
             $this->closeConnection();
             return $rows;
         }
         catch(exception $e){
+            $this->closeConnection();
             return null;
         }
     }
