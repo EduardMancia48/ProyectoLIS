@@ -4,36 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Inicio de sesion</title>
-    <script src="/ProyectoCatedra_LIS/View/assets/js/bootstrap.min.js"></script>
-    <script src="/ProyectoCatedra_LIS/View/assets/js/alertify.js" type="text/javascript"></script>
+    <title>Inicio de sesión</title>
     <link href="/ProyectoCatedra_LIS/View/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="/ProyectoCatedra_LIS/View/assets/css/alertify.core.css" rel="stylesheet" type="text/css"/>
     <link href="/ProyectoCatedra_LIS/View/assets/css/alertify.default.css" rel="stylesheet" type="text/css"/>
-    <script src="/ProyectoCatedra_LIS/View/assets/js/script.js"></script>
+    <script src="/ProyectoCatedra_LIS/View/assets/js/bootstrap.min.js"></script>
+    <script src="/ProyectoCatedra_LIS/View/assets/js/alertify.js" type="text/javascript"></script>
+    <script src="/ProyectoCatedra_LIS/View/assets/js/script.js"></script>   
+    <link rel="stylesheet" href="/ProyectoCatedra_LIS/View/assets/css/estilos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://preview.colorlib.com/theme/bootstrap/login-form-14/css/style.css">
+ 
 </head>
-<body>
-<div class="row">
-    <div class="col-md-6 mx-auto">
-        <div class="card bg-light mt-5">
-            <div class="card-header card-text">
-                <h2 class="card-text">Iniciar sesion</h2>
-                <?php
-                        if(isset($errores)){
-                            if(count($errores)>0){
-                                echo "<div class='alert alert-danger'><ul>";
-                                foreach ($errores as $error) {
-                                    echo "<li>$error</li>";
-                                }
-                                echo "</ul></div>";
 
-                            }
+<body  class="login-body">
+
+    <div class="card bg-light">
+        <div class="card-header" style="display: flex;">
+        <img src="/ProyectoCatedra_LIS/View/assets/images/icon-login.png" alt="xd" width="100px">
+            <h2 class="text-center" style="margin-top: 10px";>Iniciar sesión </h2>
+         
+            <?php
+                if(isset($errores)){
+                    if(count($errores)>0){
+                        echo "<div class='alert alert-danger'><ul>";
+                        foreach ($errores as $error) {
+                            echo "<li>$error</li>";
                         }
-                   ?>
-            <p class="card-text">Ingrese su correo y contraseña</p>
-            </div>
+                        echo "</ul></div>";
+                    }
+                }
+            ?>
+           
+        </div>
+        <p class="text-center">Ingrese su correo y contraseña</p>
         
-            <div class="card-body">
+            <div class="card-body"  id="card1">
                 <form method="post" action="/ProyectoCatedra_LIS/Usuarios/validate">
                     <div class="form-group">
                         <label for="email">Correo<sub>*</sub></label>

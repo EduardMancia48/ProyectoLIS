@@ -10,6 +10,11 @@
     <link href="/ProyectoCatedra_LIS/View/assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="/ProyectoCatedra_LIS/View/assets/css/alertify.core.css" rel="stylesheet" type="text/css"/>
     <link href="/ProyectoCatedra_LIS/View/assets/css/alertify.default.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://preview.colorlib.com/theme/bootstrap/login-form-14/css/style.css">
+  <link rel="stylesheet" href="/ProyectoCatedra_LIS/View/assets/css/estilos.css">
+
     <script src="/ProyectoCatedra_LIS/View/assets/js/script.js"></script>
 </head>
 <body>
@@ -65,7 +70,9 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col">
-                            <button class="btn btn-lg btn-primary btn-block" name="registrar" type="submit">Registrar</button>                            </div>
+                            <button class="btn btn-lg btn-registrar btn-primary btn-block" name="registrar"  type="submit">Registrar</button>
+                         
+                        </div>
                             </div>
                             <div class="col">
                                 <a href="/ProyectoCatedra_LIS/Usuarios/login" class="btn btn-light btn-block pull-right">Ya tienes una cuenta? Login </a>
