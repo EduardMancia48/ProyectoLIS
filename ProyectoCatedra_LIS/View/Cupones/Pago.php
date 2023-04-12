@@ -1,3 +1,4 @@
+<?php defined('BASEPATH') OR exit('Acceso no autorizado')?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +17,7 @@
 <body>
 	<div class="container mt-5">
 		<h1>Cupones Treasure </h1>
-		<form action="process-payment.php" method="post">
+		<form action="/ProyectoCatedra_LIS/View/Cupones/Pago.php" method="post">
 		<div class="col-lg-7 border shadow pb-3 pt-3">
 			
 		<div class="form-group row">
@@ -47,8 +48,7 @@
 				<input type="text" class="form-control" name="cvv" id="cvv" placeholder="CVV"pattern="^\d{3,4}$" required>
 			</div>
 		</div>
-
-			<button type="submit" class="btn btn-success">Submit</button>
+		     <a class="btn btn-success" name="Confirmar" href="<?='/ProyectoCatedra_LIS/Cupones/confirmar_Compra/'.$cupon['cod_cupon']?>">Confirmar</a>
 		</div>
 		</form>
 	</div>
