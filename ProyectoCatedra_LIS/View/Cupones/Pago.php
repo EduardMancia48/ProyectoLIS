@@ -27,7 +27,7 @@
 		<div class="form-group row">
 			<div class="col-lg-10">
 				<label for="card_number" class="text-white"><b>Nombre del Titular:</b></label>
-				<input type="text" class="form-control" name="user_name" id="user_name" pattern="[a-zA-Z]+" placeholder="Ingrese su nombre"required>
+				<input type="text" class="form-control" name="user_name" id="user_name" pattern="[a-zA-Z]+" placeholder="Ingrese su nombre" required>
 			</div>
 		</div>
 
