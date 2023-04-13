@@ -7,11 +7,16 @@
 }
 
 body {
+    background-image: url("https://cdn.pixabay.com/photo/2012/04/18/16/09/beehive-37436_640.png");
+    background-color: rgb(245, 239, 230);
+    background-repeat: repeat, no-repeat;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+
 }
+
 
 main {
     width: 100%;
