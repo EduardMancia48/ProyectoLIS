@@ -34,7 +34,13 @@ class CuponesController extends Controller{
         $cupon=$this->model->getCupones($id);
         $vistaBag['cupon']=$cupon[0];
         $this->render("confirmacion.php",$vistaBag);
+    }
 
+    public function generar_PDF($id){
+        $vistaBag=array();
+        $cupon=$this->model->getCupones($id);
+        $vistaBag['cupon']=$cupon[0];
+        $this->render("generar_pdf.php",$vistaBag);
     }
     
 }

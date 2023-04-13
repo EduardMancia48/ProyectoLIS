@@ -19,7 +19,7 @@
                     <h2><strong class="text-white">Cuponera Treasure</strong></h2>
                 </a>
                 <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="C_sesion">Cerrar sesión</button>
+                <a class="btn btn-success" name="C_sesion" href="/ProyectoCatedra_LIS/Usuarios/logout/">Cerrar sesión</a>                
                 </form>
             </div>
         </div>
