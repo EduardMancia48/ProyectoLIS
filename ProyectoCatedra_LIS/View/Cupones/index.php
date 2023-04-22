@@ -69,8 +69,8 @@
                                     <div class="card-body">
                                         <h5 class="card-title"><?php echo $titulo?></h5>
                                         <p class="card-text" data-fecha-inicio="<?php echo $fechai; ?>" data-fecha-fin="<?php echo $fechaf;?>">
-                                        <a class="btn btn-sm-2 btn-link" data-bs-toggle="collapse" data-bs-target="#collapse1"><b>Mas detalles ⬇️</b></a>
-                                            <div class="mt-2 collapse card shadow pl-2 pb-2" id="collapse1">
+                                        <a class="btn btn-sm-2 btn-link" data-bs-toggle="collapse" data-bs-target="#<?php echo $codigo ?>"><b>Mas detalles ⬇️</b></a>
+                                            <div class="mt-2 collapse card shadow pl-2 pb-2" id="<?php echo $codigo ?>">
                                             <b> Código:</b>
                                             <?php echo $codigo; ?> <br />
                                             <b>Descripción: </b>
