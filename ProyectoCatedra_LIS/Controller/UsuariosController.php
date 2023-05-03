@@ -59,7 +59,7 @@ class UsuariosController extends Controller{
             $usuario['direccion']=$direccion;
             $usuario['contrasena']=$contrasena;
 
-            if(!esDui($cod_Dui)){
+            if(!esDui($cod_Dui)||!isset($cod_Dui)){
                 array_push($errores,'Debes ingresar un Dui valido');
             }
 

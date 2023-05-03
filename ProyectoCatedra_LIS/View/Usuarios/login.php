@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,14 +14,12 @@
     <script src="/ProyectoCatedra_LIS/View/assets/js/script.js"></script>   
     <link rel="stylesheet" href="/ProyectoCatedra_LIS/View/assets/css/estilos.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://preview.colorlib.com/theme/bootstrap/login-form-14/css/style.css">
- 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://preview.colorlib.com/theme/bootstrap/login-form-14/css/style.css">
+    <link rel="stylesheet" href="./View/assets/css/footer.css">
 </head>
-
 <body  class="login-body">
-
-    <div class="card bg-light">
+   <div class="card bg-light">
         <div class="card-header" style="display: flex;">
         <img src="/ProyectoCatedra_LIS/View/assets/images/icon-login.png" alt="xd" width="100px">
             <h2 class="text-center" style="margin-top: 10px";>Iniciar sesión </h2>
@@ -55,7 +54,8 @@
                     <div class="form-group">
                         <div class="row">
                             <div class="col">
-                            <button class="btn btn-lg btn-primary btn-block" name="enviar" type="submit">Iniciar sesión</button>                            </div>
+                            <button class="btn btn-lg btn-primary btn-block" name="enviar" type="submit">Iniciar sesión</button>
+                            </div>
                         </div>
                         <div class="col">
                                 <a href="/ProyectoCatedra_LIS/View/Usuarios/register.php" class="btn btn-light btn-block pull-right">No tienes una cuenta? Registrate </a>

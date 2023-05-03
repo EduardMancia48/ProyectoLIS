@@ -7,7 +7,7 @@ class UsuariosModel extends ModelwPDO{
     //Metodo para validar a un usuario
     public function validarUser($email,$pass){
         $pass_hash = hash('sha256', $pass); // convierte la contraseña en un hash SHA-256
-        $query="SELECT nombres, apellidos FROM clientes WHERE correo=:email AND contraseña=:contrasena";
+        $query="SELECT Cod_Dui, nombres, apellidos FROM clientes WHERE correo=:email AND contraseña=:contrasena";
         return $this->getQuery($query,['email'=>$email, 'contrasena'=>$pass_hash]);
     }
 
@@ -20,6 +20,7 @@ class UsuariosModel extends ModelwPDO{
                 VALUES (:cod_Dui, :nombre, :apellido, :telefono, :correo, :direccion, :contrasena)";
         return $this->setQuery($query,$user);
     }
+
     
 }
 ?>
