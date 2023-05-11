@@ -42,8 +42,9 @@
 </nav>
 	<div class="container mt-5">
 		<center><h1><strong>Datos de compra</strong></h1></center>
-		<form action="/ProyectoCatedra_LIS/Cupones/confirmar_Compra" method="POST">
+		<center><form action="/ProyectoCatedra_LIS/Cupones/confirmar_Compra" method="POST">
     <input type="hidden" name="cod_cupon" value="<?=$cupon['cod_cupon']?>">
+    <input type="hidden" name="cant_disponible" value="<?=$cupon['cant_cupones_disponibles']?>">
     <input type="hidden" name="Cod_Dui" value="<?=$_SESSION['login_data']['Cod_Dui']?>">
     <?php $cantd=$cupon['cant_cupones_disponibles']; ?>
 		<div class="col-lg-7 border shadow pb-3 pt-3 bg-dark">
@@ -83,7 +84,7 @@
 		</div>
 		    <button class="btn btn-lg btn-registrar btn-primary btn-block" name="confirmar" type="submit">Confirmar</button>
 		</div>
-		</form>
+		</form></center>
 	</div>
  <br>
  <footer class="pie-pagina">

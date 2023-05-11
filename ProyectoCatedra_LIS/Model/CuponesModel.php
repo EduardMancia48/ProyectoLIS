@@ -21,6 +21,13 @@ public function comprarCupon($datos=array()){
   return $this->setQuery($query,$datos);
 }
 
+//Función para disminuir la cantidad de cupones disponibles
+public function disminuirCupon($disminuir, $cod_cupon){
+  $query="UPDATE promociones SET cant_cupones_disponibles = ? WHERE cod_cupon= ?";
+  $datos=array($disminuir,$cod_cupon);
+  return $this->setQuery($query,$datos);
+}
+
 //Funcion para ver los cupones adquiridos
 public function ver_MisCupones($cod_dui=''){
   $query="SELECT p.cod_cupon,p.titulo_oferta,p.descripcion,p.fecha_limite,v.estado,c.Cod_Dui

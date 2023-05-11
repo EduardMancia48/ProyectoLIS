@@ -34,11 +34,20 @@ class CuponesController extends Controller{
         if(isset($_POST['confirmar'])){
             extract($_POST);
             $datos=array();
+            $bag=array();
+            $cant_disponible='';
             $cod_dui=$_SESSION['login_data']['Cod_Dui'];
             $datos['cod_cupon']=$cod_cupon;
             $datos['Cod_Dui']=$cod_dui;
             $datos['cantidad']=$cantidad;
+            $cupon=$this->model->getCupones($cod_cupon);
+            $bag['cupon']=$cupon[0];
+            extract($bag);
+            $cantd=$cupon['cant_cupones_disponibles'];
+            $nueva=$cantd-$cantidad;
+            var_dump($nueva);
             $this->model->comprarCupon($datos);
+            $this->model->disminuirCupon($nueva,$cod_cupon);
             header('location:/ProyectoCatedra_LIS/Cupones/confirmacion/'.$cod_cupon);
         }       
     }
